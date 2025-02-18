@@ -1,0 +1,100 @@
+:root {
+    --background: #fbf0df;
+    --color: rgb(51, 77, 102);
+}
+
+@font-face {
+    font-family: 'Ohno-Blazeface';
+    src: url('fonts/Ohno-Blazeface.woff2') format('woff2'),
+         url('fonts/Ohno-Blazeface.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Ohno Blazeface', sans-serif;
+    background-color: var(--background);
+    color: var(--color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav button {
+    padding: 0.4rem;
+    margin: 0.1em;
+    border: none;
+    background-color: transparent;
+    color: var(--color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .5s all ease-in-out;
+}
+
+nav button:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.homeContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 5rem;
+}
+
+.homeInfo {
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 4rem;
+    position: relative;
+    
+}
+
+#homeInfoImg {
+    transform: scale(1);
+    margin-top: 5rem;
+}
+
+.homeInfo h1 {
+    font-size: 3rem;
+    font-family: "Monomakh", serif;
+    font-weight: 1200;
+    font-style: normal;
+    margin: -.3rem 0 4rem 0;
+}
+
+.homeInfo p {
+    font-family: 'GT-Alpina-Tw-Trial-Th-It';
+    font-size: .9rem;
+    font-weight: 100;
+    opacity: .9;
+    margin: 4rem 0 ;
+}
+
+.imgContainer {
+    display: flex;
+    margin-right: 6rem;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.homeContainer img {
+    transform: scale(.9);
+}
+
+.smoke {
+    transform: scale(.6) !important;
+    margin: 2rem -10rem !important;
+    opacity: .8;
+    z-index: .9;
+}
+
