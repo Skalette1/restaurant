@@ -1,10 +1,16 @@
-@media(max-width: 650px) {
-nav {
+@media (max-width: 650px) {
+  header {
+    display: flex;
+    justify-content: center;
+    margin: 0 6rem;
+  }
+
+  nav {
     display: flex;
     gap: 0.3rem;
- }
+  }
 
-nav button {
+  nav button {
     padding: 0.4rem;
     margin: 0.1em;
     border: none;
@@ -12,24 +18,23 @@ nav button {
     color: var(--color);
     font-size: 1.3rem;
     font-weight: bold;
- }
+  }
 
- .imgContainer {
+  .imgContainer {
     display: flex;
     flex-direction: column;
-} 
+    margin-right: 2rem;
+  }
 
- .homeContainer img {
-    transform: scale(.7);
-}
+  .homeContainer img {
+    transform: scale(0.5);
+  }
 
-.homeInfo p {
+  .homeInfo p {
     display: none;
-}
+  }
 
-
-.smoke {
+  .smoke {
     display: none;
-}
-
+  }
 }
