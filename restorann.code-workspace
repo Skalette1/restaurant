@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ohno-blazeface"
+		},
+		{
+			"path": "../fonnts.com-389765"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "restorann"
+	}
+}
