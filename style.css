@@ -1,100 +1,145 @@
 :root {
-    --background: #fbf0df;
-    --color: rgb(51, 77, 102);
+  --background: #fbf0df;
+  --color: rgb(51, 77, 102);
 }
 
 @font-face {
-    font-family: 'Ohno-Blazeface';
-    src: url('fonts/Ohno-Blazeface.woff2') format('woff2'),
-         url('fonts/Ohno-Blazeface.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Ohno-Blazeface";
+  src:
+    url("fonts/Ohno-Blazeface.woff2") format("woff2"),
+    url("fonts/Ohno-Blazeface.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: 'Ohno Blazeface', sans-serif;
-    background-color: var(--background);
-    color: var(--color);
+  font-family: "Ohno Blazeface", sans-serif;
+  background-color: var(--background);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
 }
 
 nav {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 nav button {
-    padding: 0.4rem;
-    margin: 0.1em;
-    border: none;
-    background-color: transparent;
-    color: var(--color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    transition: .5s all ease-in-out;
+  padding: 0.4rem;
+  margin: 0.1em;
+  border: none;
+  background-color: transparent;
+  color: var(--color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
 }
 
 nav button:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 .homeContainer {
-    display: flex;
-    justify-content: space-between;
-    margin: 3rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 5rem;
 }
 
 .homeInfo {
-    font-weight: bolder;
-    text-align: left;
-    margin-top: 4rem;
-    position: relative;
-    
+  font-weight: bolder;
+  text-align: left;
+  margin-top: 4rem;
+  position: relative;
 }
 
 #homeInfoImg {
-    transform: scale(1);
-    margin-top: 5rem;
+  transform: scale(1);
+  margin-top: 5rem;
 }
 
 .homeInfo h1 {
-    font-size: 3rem;
-    font-family: "Monomakh", serif;
-    font-weight: 1200;
-    font-style: normal;
-    margin: -.3rem 0 4rem 0;
+  font-size: 3rem;
+  font-family: "Monomakh", serif;
+  font-weight: 1200;
+  font-style: normal;
+  margin: -0.3rem 0 4rem 0;
 }
 
 .homeInfo p {
-    font-family: 'GT-Alpina-Tw-Trial-Th-It';
-    font-size: .9rem;
-    font-weight: 100;
-    opacity: .9;
-    margin: 4rem 0 ;
+  font-family: "GT-Alpina-Tw-Trial-Th-It";
+  font-size: 0.9rem;
+  font-weight: 100;
+  opacity: 0.9;
+  margin: 4rem 0;
 }
 
 .imgContainer {
-    display: flex;
-    margin-right: 6rem;
-    padding: 0.5rem;
-    position: relative;
+  display: flex;
+  margin-right: 6rem;
+  padding: 0.5rem;
+  position: relative;
 }
 
 .homeContainer img {
-    transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .smoke {
-    transform: scale(.6) !important;
-    margin: 2rem -10rem !important;
-    opacity: .8;
-    z-index: .9;
+  transform: scale(0.6) !important;
+  margin: 2rem -10rem !important;
+  opacity: 0.8;
+  z-index: 0.9;
 }
 
+.menuCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.menuCard {
+  padding: 1rem;
+  border-radius: 3rem;
+  border: 1px dotted;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: 0px 1px 0px #000;
+}
+
+.menuContainer img {
+  width: 20rem;
+  height: 20rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: transparent;
+}
+
+.menuContainer button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #f5d9af;
+  color: var(--color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.contactContainer {
+  text-align: center;
+  margin: 8rem auto;
+  box-shadow: 0 0 10px #000;
+  padding: 3rem;
+}
