@@ -1,4 +1,8 @@
-import { num } from './menu'
-import './style.css'
+import { createHeader } from './header.js'
+import { createHomePage } from './home.js'
 
-console.log(num);
+
+const root = document.querySelector('.root')
+
+root.append(createHeader(), createHomePage())
+// ddd

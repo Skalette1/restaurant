@@ -1,0 +1,35 @@
+@media(max-width: 650px) {
+nav {
+    display: flex;
+    gap: 0.3rem;
+ }
+
+nav button {
+    padding: 0.4rem;
+    margin: 0.1em;
+    border: none;
+    background-color: transparent;
+    color: var(--color);
+    font-size: 1.3rem;
+    font-weight: bold;
+ }
+
+ .imgContainer {
+    display: flex;
+    flex-direction: column;
+} 
+
+ .homeContainer img {
+    transform: scale(.7);
+}
+
+.homeInfo p {
+    display: none;
+}
+
+
+.smoke {
+    display: none;
+}
+
+}
