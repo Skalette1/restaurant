@@ -27,6 +27,15 @@ header {
   margin: 2rem;
 }
 
+.logo {
+  cursor: grab;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+}
+
 nav {
   display: flex;
   gap: 0.5rem;
@@ -49,10 +58,41 @@ nav button:hover {
   text-decoration: underline;
 }
 
+.nav-cart {
+  width: 40px;
+  height: 41px;
+  cursor: pointer;
+}
+
+.search {
+  color: #e88b00;
+  background-color: #fff;
+  padding: 0.8rem 1.3rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.searchHolder {
+  position: relative;
+}
+
+.searchIcon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: translate(-56px, 5px);
+}
+
+.search::placeholder {
+  color: #d4b586;
+  font-size: 1.1rem;
+}
 .homeContainer {
   display: flex;
   justify-content: space-between;
   margin: 3rem 5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .homeInfo {
@@ -60,6 +100,8 @@ nav button:hover {
   text-align: left;
   margin-top: 4rem;
   position: relative;
+  flex: 1;
+  min-width: 250px;
 }
 
 #homeInfoImg {
@@ -68,7 +110,7 @@ nav button:hover {
 }
 
 .homeInfo h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Monomakh", serif;
   font-weight: 1200;
   font-style: normal;
@@ -77,7 +119,7 @@ nav button:hover {
 
 .homeInfo p {
   font-family: "GT-Alpina-Tw-Trial-Th-It";
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 100;
   opacity: 0.9;
   margin: 4rem 0;
@@ -88,6 +130,9 @@ nav button:hover {
   margin-right: 6rem;
   padding: 0.5rem;
   position: relative;
+  flex: 1;
+  min-width: 250px;
+  justify-content: center;
 }
 
 .homeContainer img {
@@ -101,11 +146,98 @@ nav button:hover {
   z-index: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .homeContainer {
+    margin: 2rem 3rem;
+  }
+
+  .homeInfo h1 {
+    font-size: 2.5rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.85rem;
+    margin: 2rem 0;
+  }
+
+  .smoke {
+    transform: scale(0.55) !important;
+  }
+
+  .imgContainer {
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homeInfo {
+    text-align: center;
+    margin-top: 2rem;
+    flex: none;
+  }
+
+  .homeInfo h1 {
+    font-size: 2rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.8rem;
+    margin: 2rem 0;
+  }
+
+  .smoke {
+    transform: scale(0.5) !important;
+    margin: 0 !important;
+  }
+
+  .imgContainer {
+    margin-right: 0;
+    margin-top: -4rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeContainer {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  .homeInfo h1 {
+    font-size: 1.8rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .imgContainer {
+    margin-right: 0;
+    margin-top: -13rem;
+  }
+}
+
+.smoke {
+  transform: scale(0.6) !important;
+  margin: 2rem -10rem !important;
+  opacity: 0.8;
+  z-index: 0.9;
+}
+
 .menuCards {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
   gap: 5rem;
 }
 
@@ -144,23 +276,23 @@ nav button:hover {
   padding: 3rem;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
-.menuContainer{
-background-color: rgb(251, 240, 223);
-font-family: "Host Grotesk", serif;
-color: rgb(51, 77, 102);
+.menuContainer {
+  background-color: rgb(251, 240, 223);
+  font-family: "Host Grotesk", serif;
+  color: rgb(51, 77, 102);
 }
 
-.menuText{
+.menuText {
   font-size: 20px;
   font-weight: 400;
 }
 
-.menuCards{
+.menuCards {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -169,26 +301,24 @@ color: rgb(51, 77, 102);
   gap: 5rem;
 }
 
-.cardImg{
+.cardImg {
   width: 15rem;
 }
 
-/* .cardBtn{
-  width: 5rem;
-  height: 2rem;
+.cardBtn{
   background-color: rgb(51, 77, 102);
   color: white;
   border: none;
-  border-radius: 5rem;
-} */
-
-.cardBtn:hover{
-  background-color: white;
-  color: rgb(51, 77, 102);
-  border: 3px solid rgb(51, 77, 102);
+  transition: .5s all ease-in-out;
 }
 
-.contactContainer{
+.cardBtn:hover {
+  background-color: white;
+  color: rgb(51, 77, 102);
+  border: 1px solid rgb(51, 77, 102);
+}
+
+.contactContainer {
   background-color: rgb(251, 240, 223);
   font-family: "Host Grotesk", serif;
   color: rgb(51, 77, 102);
@@ -197,55 +327,70 @@ color: rgb(51, 77, 102);
   align-items: center;
 }
 
-.contactMenu{
+.contactMenu {
   display: flex;
   gap: 3rem;
 }
 
-.contactForm{
+.contactForm {
   display: flex;
   flex-direction: column;
 }
-.labelComment{
+.labelComment {
   margin-top: 2rem;
 }
 
-.formButton{
+.formButton {
   margin-top: 1rem;
   color: rgb(51, 77, 102);
   font-size: 16px;
   font-weight: 500;
-  
 }
 
-.formButton:hover{
+.formButton:hover {
   background-color: rgb(51, 77, 102);
   color: rgb(251, 240, 223);
   border: 1px solid rgb(251, 240, 223);
   border-radius: 2px;
 }
 
-.aboutContainer{
+.aboutContainer {
   display: flex;
   justify-content: center;
   background-color: rgb(251, 240, 223);
   color: rgb(51, 77, 102);
+  width: 100%;
+  margin-top: -8rem;
 }
 
-.aboutMenu{
-margin-top: 10rem;
-display: flex;
-flex-direction: column;
-align-items: center;
-max-width: 35rem;
-
+.aboutMenu {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 35rem;
 }
 
-.aboutText{
+.aboutText {
   font-size: 18px;
   font-weight: 550;
 }
 
-.aboutImage{
+.aboutImage {
   max-width: 35rem;
+  margin-top: 0.5rem;
+  border-radius: 2rem;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartImg {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
 }
