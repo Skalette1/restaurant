@@ -26,17 +26,17 @@ body {
 }
 
 header {
-  position: fixed;
+  position: fixed; 
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(251, 240, 223, 0.7);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem; 
+  background-color: rgba(251, 240, 223, .7) ;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {
@@ -111,14 +111,14 @@ nav button:hover {
 
 .homeContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
+  justify-content: center; 
+  align-items: center; 
+  margin: 3rem auto; 
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  max-width: 1200px; 
+  padding: 0 1rem; 
+  box-sizing: border-box; 
 }
 
 .homeInfo {
@@ -155,8 +155,7 @@ nav button:hover {
 }
 
 @keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
@@ -166,17 +165,17 @@ nav button:hover {
 
 .imgContainer {
   flex: 1;
-  max-width: 600px;
+  max-width: 600px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; 
 }
 
 .smoke,
 .tigerImg {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; 
+  height: auto; 
 }
 
 .smoke {
@@ -249,11 +248,11 @@ nav button:hover {
   width: 15rem;
 }
 
-.cardBtn {
+.cardBtn{
   background-color: rgb(51, 77, 102);
   color: white;
   border: none;
-  transition: 0.5s all ease-in-out;
+  transition: .5s all ease-in-out;
 }
 
 .cardBtn:hover {
@@ -312,7 +311,7 @@ nav button:hover {
   color: rgb(51, 77, 102);
   font-size: 16px;
   font-weight: 500;
-  transition: 0.5s all ease-in-out;
+  transition: .5s all ease-in-out;
 }
 
 .formButton:hover {
@@ -350,9 +349,54 @@ nav button:hover {
 }
 
 .cart-container {
-  margin: 10rem auto;
+  margin: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 5rem;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartImg {
+  width: 50px !important;
+  height: 50px !important;
+  cursor: pointer;
+}
+
+.clear-cart-btn {
+  background: #ff4444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.clear-cart-btn:hover {
+  background: #cc0000;
+}
+
+.cart-card {
+  display: flex;
+  flex-direction: column;
+}
+.cart-card img {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Контейнер корзины */
+.cart-container {
+  margin: 10rem auto; /* Центрируем по горизонтали */
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 1200px; /* Ограничиваем ширину */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -362,6 +406,7 @@ nav button:hover {
   color: rgb(51, 77, 102);
 }
 
+/* Карточка товара в корзине */
 .cart-item {
   padding: 1.5rem;
   border-radius: 3rem;
@@ -377,6 +422,7 @@ nav button:hover {
   background-color: white;
 }
 
+/* Изображение товара */
 .cart-item-img {
   width: 15rem;
   height: 15rem;
@@ -385,6 +431,7 @@ nav button:hover {
   background-color: transparent;
 }
 
+/* Информация о товаре */
 .cart-item-info {
   flex: 1;
 }
@@ -413,6 +460,7 @@ nav button:hover {
   color: #e88b00;
 }
 
+/* Кнопка очистки корзины */
 .clear-cart-btn {
   background: #ff4444;
   color: white;
@@ -428,6 +476,7 @@ nav button:hover {
   background: #cc0000;
 }
 
+/* Сообщение о пустой корзине */
 .null-cart {
   text-align: center;
   color: #666;
