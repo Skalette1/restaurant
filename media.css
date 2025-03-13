@@ -1,46 +1,120 @@
-@media (max-width: 650px) {
-  header {
-    display: flex;
-    justify-content: center;
+@media (max-width: 768px) {
+  .homeContainer {
+    margin: 1rem;
     flex-direction: column;
-    gap: 1rem;
-    margin: 1rem 6rem;
+    align-items: center;
   }
 
-  /* .search {
-
-  } */
-
-  nav {
-    display: flex;
-    gap: 0.3rem;
+  .homeInfo {
+    text-align: center;
+    margin-top: 2rem;
+    flex: none;
   }
 
-  nav button {
-    padding: 0.4rem;
-    margin: 0.1em;
-    border: none;
-    background-color: transparent;
-    color: var(--color);
-    font-size: 1.3rem;
-    font-weight: bold;
+  .homeInfo h1 {
+    font-size: 2rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.8rem;
+    margin: 2rem 0;
+  }
+
+  .smoke {
+    transform: scale(0.5) !important;
+    margin: 0 !important;
   }
 
   .imgContainer {
+    margin-right: 0;
+    margin-top: -4rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeContainer {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  .homeInfo h1 {
+    font-size: 1.8rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .imgContainer {
+    margin-right: 0;
+    margin-top: -13rem;
+  }
+}
+
+.burger-icon {
+  display: block; /* Показываем иконку бургера */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1001; /* Убедимся, что иконка поверх других элементов */
+}
+
+@media (max-width: 650px) {
+  .burger-icon {
+    display: block !important; /* Показываем иконку бургера на маленьких экранах */
+  }
+
+  nav button {
+    display: none; /* Скрываем кнопки навигации */
+  }
+
+  nav.active {
     display: flex;
     flex-direction: column;
-    margin-right: 2rem;
+    gap: 1rem;
+    position: absolute;
+    top: 100%; /* Позиционируем меню под header */
+    left: 0;
+    width: 100%;
+    background-color: rgba(251, 240, 223, 0.9); /* Фон меню */
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .homeContainer img {
-    transform: scale(0.5);
+  .burger-icon.active {
+    transform: rotate(90deg); /* Поворот бургера для визуального эффекта */
   }
-  /* . */
-  /* .homeInfo p {
-    display: none;
-  } */
+
+  .nav-cart {
+    display: none; /* Скрыть корзину по умолчанию */
+  }
+
+  nav.active .nav-cart {
+    display: block;
+    margin-top: 1rem; /* Отступ сверху */
+  }
+}
+@media (max-width: 1024px) {
+  .homeContainer {
+    margin: 2rem 3rem;
+  }
+
+  .homeInfo h1 {
+    font-size: 2.5rem;
+  }
+
+  .homeInfo p {
+    font-size: 0.85rem;
+    margin: 2rem 0;
+  }
 
   .smoke {
-    display: none;
+    transform: scale(0.55) !important;
+  }
+
+  .imgContainer {
+    margin-right: 3rem;
   }
 }
