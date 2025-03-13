@@ -1,3 +1,5 @@
+import { addToCart } from "./cart.js";
+
 export const createMenu = () => {
   const menuContainer = document.createElement("div");
   menuContainer.className = "menuContainer";
@@ -76,10 +78,7 @@ export const createMenu = () => {
     menuCards.append(card);
   });
 
-  menuContainer.append(menuTitle);
-  menuContainer.append(menuText);
-  menuContainer.append(menuCards);
-
+  menuContainer.append(menuTitle, menuText, menuCards);
   return menuContainer;
 };
 
@@ -111,6 +110,10 @@ const createMenuCard = ({ title, description, price, imgSrc, cartImg }) => {
   cardBottom.classList.add("card-bottom");
 
   menuCard.append(cardImg, cardTitle, cardText, cardBottom);
+
+  cart.addEventListener("click", () => {
+    addToCart({ title, description, price, imgSrc });
+  });
 
   return menuCard;
 };
