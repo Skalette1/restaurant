@@ -1,11 +1,10 @@
-// main.js
+
 import { createAbout } from "./about.js";
 import { createCartPage } from "./cart.js";
 import { createContact } from "./contact.js";
-import { createHeader } from "./header.js";
 import { createHomePage } from "./home.js";
 import { createMenu } from "./menu.js";
-
+import { createHeader } from "./header.js";
 const root = document.querySelector(".root");
 
 const header = createHeader();
